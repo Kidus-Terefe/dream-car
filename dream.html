@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Dream Car</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dream.css" />
+</head>
+<body>
+
+  <header>
+    <p class="eyebrow">The Showroom</p>
+    <h1>Your Dream Car</h1>
+    <p class="tagline">Three brands. Three models. One obsession.</p>
+  </header>
+
+  <main>
+
+    <!-- STEP 1: Brand -->
+    <section id="step-brand">
+      <p class="step-label"><span>01</span> Choose your brand</p>
+      <div class="brand-grid">
+        <button class="brand-card" data-brand="ferrari" onclick="selectBrand(this)">
+          <span class="brand-icon">🐴</span>
+          <span class="brand-name">Ferrari</span>
+          <span class="brand-origin">Maranello, Italy</span>
+        </button>
+        <button class="brand-card" data-brand="lamborghini" onclick="selectBrand(this)">
+          <span class="brand-icon">🐂</span>
+          <span class="brand-name">Lamborghini</span>
+          <span class="brand-origin">Sant'Agata, Italy</span>
+        </button>
+        <button class="brand-card" data-brand="bugatti" onclick="selectBrand(this)">
+          <span class="brand-icon">🔴</span>
+          <span class="brand-name">Bugatti</span>
+          <span class="brand-origin">Molsheim, France</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- STEP 2: Model -->
+    <section id="step-model" class="hidden">
+      <p class="step-label"><span>02</span> Choose your model</p>
+      <div class="model-grid" id="model-grid"></div>
+    </section>
+
+    <!-- STEP 3: Reveal -->
+    <section id="step-reveal" class="hidden">
+      <p class="step-label"><span>03</span> Your dream car</p>
+      <div class="car-card" id="car-card">
+        <div class="car-img-wrap" id="car-img-wrap">
+          <div class="spinner"></div>
+        </div>
+        <div class="car-details">
+          <h2 id="car-name"></h2>
+          <div class="car-stats" id="car-stats"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="dream.js"></script>
+</body>
+</html>
